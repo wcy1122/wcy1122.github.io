@@ -16,8 +16,7 @@ Education
 Experience
 ======
 * Now I'm working on Weakly-suprtvised Object Detection with Professor Wei-Shi Zheng in ISEE lab.
-* Previously, I was a menber of ICPC/CCPC team in Sun Yat-Sen Universyty, under the supervision of Prof Songshan Guo, \
-  Han Lin and Zizhen Zhang. I has won 4 gold medals and 4 silver medals together with my team mates. 
+* Previously, I was a menber of ICPC/CCPC team in Sun Yat-Sen Universyty, under the supervision of Prof Songshan Guo, Han Lin and Zizhen Zhang. I has won 4 gold medals and 4 silver medals together with my team mates. 
 
 Awards & Honors
 ======
