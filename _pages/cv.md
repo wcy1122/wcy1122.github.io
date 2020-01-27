@@ -11,8 +11,7 @@ redirect_from:
 
 Education
 ======
-* **B.Sc. in Computer Science**, Sun Yat-sen University, 2017.9 - 2021.7 (expected)<br>\
-  **GPA:** 3.9/4.0 **Major:** 4.0/4.0 **Rank:** 7/189
+* **B.Sc. in Computer Science**, Sun Yat-sen University, 2017.9 - 2021.7 (expected)<br>**GPA:** 3.9/4.0 **Major:** 4.0/4.0 **Rank:** 7/189
 
 Experience
 ======
@@ -23,9 +22,9 @@ Experience
 Awards & Honors
 ======
 * **First-Prize Scholarship $\times$ 2**, Sun Yat-sen University (Top 5% of 240), 2017-2018, 2018-2019
-* **Gold Medal** at *International Collegiate Programming Contest(ICPC) Asia Reginal* $\times$ 3**, 2018.10, 2019.10, 2019.11
-* **Gold Medal** at *China Collegiate Programming Contest(CCPC) Reginal* $\times$ 1**, 2019.9
-* **Meritorious Winner**, *Interdisciplinary Contest in Modeling(ICM)*, 2019.1
+* **Gold Medal $\times$ 3**, *International Collegiate Programming Contest(ICPC) Asia Reginal*(Top 10%), 2018.10, 2019.10, 2019.11
+* **Gold Medal**, *China Collegiate Programming Contest(CCPC) Reginal*(Top 10%), 2019.9
+* **Meritorious Winner**, *Interdisciplinary Contest in Modeling(ICM)*(Top 8%), 2019.1
 
 Skills
 ======
