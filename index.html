@@ -121,6 +121,7 @@
             <td width="60%" valign="middle">
               <heading>News</heading>
               <ul>
+                <li> <b>[2024-07]</b> <a href="https://arxiv.org/abs/2311.17043"> LLaMA-VID </a> is accepted in ECCV 2024, Milano. </li>
                 <li> <b>[2024-03]</b> We release <a href="https://arxiv.org/abs/2403.18814"> Mini-Gemini </a>, an open source vision-language models that support high-resolution image understanding, reasoning and generation. </li>
                 <li> <b>[2024-02]</b> <a href="https://arxiv.org/abs/2403.09639"> GroupContrast </a> is accepted in CVPR 2024, Seattle. </li>
                 <li> <b>[2023-11]</b> We release <a href="https://arxiv.org/abs/2311.17043"> LLaMA-VID </a>, an open source vision-language models that support hour-long video understanding and reasoning. </li>
@@ -160,6 +161,22 @@
           </script>
 
           <tr>
+            <td width="25%" id="llamavid-img"></td>
+            <td valign="top" width="75%" id="llamavid-txt"></td>
+          </tr>
+          <script type="text/javascript">
+            createProjectElement(
+              id = "llamavid", {
+              title: "LLaMA-VID: An Image is Worth 2 Tokens in Large Language Models",
+              paper_url: "https://arxiv.org/abs/2311.17043",
+              authors: "Yanwei Li*, <b> Chengyao Wang* </b>, Jiaya Jia",
+              conference: "ECCV 2024",
+              image: "figures/LLaMA-VID.png",
+              others: "[<a href=\"https://arxiv.org/pdf/2311.17043.pdf\"><b>paper</b></a>] [<a href=\"https://github.com/dvlab-research/LLaMA-VID\"><b>code</b></a>] [<a href=\"https://llama-vid.github.io/\"><b>project</b></a>] [<a href=\"http://103.170.5.190:7864/\"><b>demo</b></a>]"
+            });
+          </script>
+
+          <tr>
             <td width="25%" id="groupcontrast-img"></td>
             <td valign="top" width="75%" id="groupcontrast-txt"></td>
           </tr>
@@ -172,22 +189,6 @@
               conference: "CVPR 2024",
               image: "figures/GroupContrast.png",
               others: "[<a href=\"https://arxiv.org/pdf/2403.09639.pdf\"><b>paper</b></a>] [<a href=\"https://github.com/dvlab-research/GroupContrast\"><b>code</b></a>]"
-            });
-          </script>
-          
-          <tr>
-            <td width="25%" id="llamavid-img"></td>
-            <td valign="top" width="75%" id="llamavid-txt"></td>
-          </tr>
-          <script type="text/javascript">
-            createProjectElement(
-              id = "llamavid", {
-              title: "LLaMA-VID: An Image is Worth 2 Tokens in Large Language Models",
-              paper_url: "https://arxiv.org/abs/2311.17043",
-              authors: "Yanwei Li*, <b> Chengyao Wang* </b>, Jiaya Jia",
-              conference: "Preprint",
-              image: "figures/LLaMA-VID.png",
-              others: "[<a href=\"https://arxiv.org/pdf/2311.17043.pdf\"><b>paper</b></a>] [<a href=\"https://github.com/dvlab-research/LLaMA-VID\"><b>code</b></a>] [<a href=\"https://llama-vid.github.io/\"><b>project</b></a>] [<a href=\"http://103.170.5.190:7864/\"><b>demo</b></a>]"
             });
           </script>
 
