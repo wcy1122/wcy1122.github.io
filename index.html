@@ -74,6 +74,47 @@
     span.highlight {
       background-color: #ffffd0;
     }
+
+    #news-list li:nth-child(n+7) {
+      display: none;
+    }
+
+    #news-list.expanded li:nth-child(n+7) {
+      display: list-item;
+    }
+
+    .news-toggle {
+      display: block;
+      width: 28px;
+      height: 18px;
+      margin: 4px auto 0;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      cursor: pointer;
+      color: #1772d0;
+      line-height: 1;
+    }
+
+    .news-toggle:hover {
+      color: #f09228;
+    }
+
+    .news-toggle::before {
+      content: "";
+      display: block;
+      width: 8px;
+      height: 8px;
+      margin: 2px auto 0;
+      border-right: 2px solid currentColor;
+      border-bottom: 2px solid currentColor;
+      transform: rotate(45deg);
+    }
+
+    #news-list.expanded + .news-toggle::before {
+      margin-top: 6px;
+      transform: rotate(-135deg);
+    }
   </style>
   <link rel="icon" type="image/png" href="logo.jpg">
   <title>Chengyao Wang</title>
@@ -93,7 +134,7 @@
                 <name>Chengyao Wang (王程钥)</name>
               </p>
               <p>
-                I am a PhD student at the Department of Computer Science and Engineering, The Chinese University of Hong Kong (CUHK), advised by <a href="https://jiaya.me/"> Prof. Jiaya Jia </a> and <a href="https://www.cse.cuhk.edu.hk/~byu/"> Prof. Bei Yu </a>. 
+                I am a Final year PhD student at the Department of Computer Science and Engineering, The Chinese University of Hong Kong (CUHK), advised by <a href="https://jiaya.me/"> Prof. Jiaya Jia </a> and <a href="https://www.cse.cuhk.edu.hk/~byu/"> Prof. Bei Yu </a>. 
                 Prior to that, I obtained my B.Eng. degree in Computer Science from Sun Yat-Sen University (SYSU).
                 <br>
                 <br>
@@ -101,9 +142,6 @@
                 My recent research mainly focuses on the the former part, building Multi-modal Large Language Models (MLLMs) to empower intelligence agents to interact with human and the physical world.
                 Representative works includes <a href="https://arxiv.org/abs/2311.17043"> LLaMA-VID </a>, <a href="https://arxiv.org/abs/2403.18814"> Mini-Gemini </a> and <a href="https://arxiv.org/abs/2509.25131"> MGM-Omni </a>.
                 Prior to that, I also had some experience on visual perception and representation learning.
-                <br>
-                <br>
-                I am seeking <span style="color: #ff0000;"><b>Research Scientist / MTS</b></span> opportunities in industry on <span style="color: #ff0000;"><b>Multimodal Foundation Models and Agents</b></span> for <span style="color: #ff0000;"><b>2026 Fall or later</b></span>, open to any location. Feel free to reach out if there is a good match.
                 <br>
                 <br>
                 Happy to chat about any topics, research, open source projects, life, career, investment. Feel free to email me and set up a coffee chat.
@@ -127,8 +165,11 @@
           <tr>
             <td width="60%" valign="middle">
               <heading>News</heading>
-              <ul>
+              <ul id="news-list">
+                <li> <b>[2026-08]</b> We release <a href="https://arxiv.org/abs/2608.27550"> VLAct </a>, an open source VLA pre-training framework with strong generalizability. </li>
+                <li> <b>[2026-07]</b> Passed my PhD oral defence, cheers! </li>
                 <li> <b>[2026-06]</b> <a href="https://arxiv.org/abs/2509.25131"> MGN-Omni </a> is accepted by ECCV 2026, Malmo. </li>
+                <li> <b>[2026-04]</b> We release <a href="https://arxiv.org/abs/2604.05014"> StarVLA </a>, an open source Lego-like codebase for Vision-Language-Action model developing. </li>
                 <li> <b>[2025-11]</b> Finally, <a href="https://arxiv.org/abs/2403.18814"> Mini-Gemini </a> is accepted by TPAMI, cheers! </li>
                 <li> <b>[2025-08]</b> We release <a href="https://arxiv.org/abs/2509.25131"> MGM-Omni </a>, an open source omni moded support long speech understanding, generation and zero-shot voice clone. </li>
                 <li> <b>[2025-06]</b> <a href="https://arxiv.org/abs/2412.09501"> Lyra </a> is accepted in ICCV 2025, Hawaii. </li>
@@ -139,6 +180,15 @@
                 <li> <b>[2024-02]</b> <a href="https://arxiv.org/abs/2403.09639"> GroupContrast </a> is accepted in CVPR 2024, Seattle. </li>
                 <li> <b>[2023-11]</b> We release <a href="https://arxiv.org/abs/2311.17043"> LLaMA-VID </a>, an open source vision-language models that support hour-long video understanding and reasoning. </li>
               </ul>
+              <button type="button" class="news-toggle" id="news-toggle" onclick="toggleNews()" aria-label="Expand news"></button>
+              <script type="text/javascript">
+                function toggleNews() {
+                  var list = document.getElementById("news-list");
+                  var toggle = document.getElementById("news-toggle");
+                  var expanded = list.classList.toggle("expanded");
+                  toggle.setAttribute("aria-label", expanded ? "Collapse news" : "Expand news");
+                }
+              </script>
             </td>
           </tr>
         </table>
@@ -243,6 +293,49 @@
             });
           </script>
         
+        </tabel>
+
+        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+          <tr>
+            <td width="100%" valign="middle">
+              <heading>Embodied AI </heading>
+          </tr>
+        </table>
+
+        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+
+          <tr>
+            <td width="25%" id="vlact-img"></td>
+            <td valign="top" width="75%" id="vlact-txt"></td>
+          </tr>
+          <script type="text/javascript">
+            createProjectElement(
+              id = "vlact", {
+              title: "Beyond Data Scaling: Representation-Centric Continued Pre-training for Vision-Language-Action Models",
+              paper_url: "https://arxiv.org/abs/2608.27550",
+              authors: "Senqiao Yang*, <b> Chengyao Wang* </b>, Yuxin Chen, Zixuan Wang, Longxiang Tang, Haokun Gui, Jinhui Ye, Changsheng Lu, Xiaoyang Wu, Mingkang Zhu, Pengguang Chen, Shu Liu, Zhuotao Tian, Hengshuang Zhao, Bei Yu, Jiaya Jia",
+              conference: "Arxiv Preprint",
+              image: "figures/VLAct.png",
+              others: "[<a href=\"https://arxiv.org/pdf/2608.27550.pdf\"><b>paper</b></a>] [<a href=\"https://github.com/starVLA/VLAct\"><b>code</b></a>] [<a href=\"https://starvla.github.io/VLAct\"><b>project</b></a>]"
+            });
+          </script>
+
+          <tr>
+            <td width="25%" id="starvla-img"></td>
+            <td valign="top" width="75%" id="starvla-txt"></td>
+          </tr>
+          <script type="text/javascript">
+            createProjectElement(
+              id = "starvla", {
+              title: "StarVLA: A Lego-like Codebase for Vision-Language-Action Model Developing",
+              paper_url: "https://arxiv.org/abs/2604.05014",
+              authors: "StarVLA Community",
+              conference: "Technical Report",
+              image: "figures/StarVLA.png",
+              others: "[<a href=\"https://arxiv.org/pdf/2604.05014.pdf\"><b>paper</b></a>] [<a href=\"https://github.com/starVLA/starVLA\"><b>code</b></a>] [<a href=\"https://starvla.github.io\"><b>project</b></a>]"
+            });
+          </script>
+
         </tabel>
         
 
