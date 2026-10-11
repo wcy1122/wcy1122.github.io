@@ -21,9 +21,14 @@
     applyTheme(savedTheme);
     try { localStorage.setItem('homepage-theme', savedTheme); } catch { /* The toggle still works without persistence. */ }
   });
-  preference.addEventListener('change', event => {
+  const onPreferenceChange = event => {
     if (savedTheme !== 'dark' && savedTheme !== 'light') applyTheme(event.matches ? 'dark' : 'light');
-  });
+  };
+  if (typeof preference.addEventListener === 'function') {
+    preference.addEventListener('change', onPreferenceChange);
+  } else if (typeof preference.addListener === 'function') {
+    preference.addListener(onPreferenceChange);
+  }
 
   const newsList = document.getElementById('news-list');
   const newsToggle = document.getElementById('news-toggle');
