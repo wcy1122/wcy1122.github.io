@@ -1,28 +1,39 @@
-function createProjectElement(id, project){
-    /* Create an element in Project
-    tag: some tags
-    title: title of the project or publications
-    paper_url: link to the paper
-    authors: authors
-    conference: publication venue
-    image (optional): directory to project image
-    others (optional): anything else
-    */
-    if (project.tag == null)
-        project.tag = id;
-    if (project.others == null)
-        project.others = "";
+(() => {
+  const root = document.documentElement;
+  const themeToggle = document.getElementById('theme-toggle');
+  const themeColor = document.querySelector('meta[name="theme-color"]');
+  const preference = window.matchMedia('(prefers-color-scheme: dark)');
+  let savedTheme;
+  try { savedTheme = localStorage.getItem('homepage-theme'); } catch { /* Storage may be disabled. */ }
 
-    html_img = `<img src='${project.image}' style="max-width: 150px"></div></div>`
-    html_txt = `<p>
-      <a href="${project.paper_url}"><papertitle>${project.title}</papertitle></a>
-      <br>
-      ${project.authors}
-      <br>
-      <em>${project.conference}</em>
-      <br>
-      ${project.others}`
+  function applyTheme(theme) {
+    const dark = theme === 'dark';
+    root.dataset.theme = dark ? 'dark' : 'light';
+    themeToggle.setAttribute('aria-label', dark ? 'Switch to light theme' : 'Switch to dark theme');
+    themeToggle.setAttribute('aria-pressed', String(dark));
+    themeColor.setAttribute('content', dark ? '#191b20' : '#faf9f6');
+  }
 
-    document.getElementById(id + "-img").innerHTML = html_img;
-    document.getElementById(id + "-txt").innerHTML = html_txt;
-}
+  applyTheme(savedTheme === 'dark' || savedTheme === 'light' ? savedTheme : preference.matches ? 'dark' : 'light');
+  themeToggle.hidden = false;
+  themeToggle.addEventListener('click', () => {
+    savedTheme = root.dataset.theme === 'dark' ? 'light' : 'dark';
+    applyTheme(savedTheme);
+    try { localStorage.setItem('homepage-theme', savedTheme); } catch { /* The toggle still works without persistence. */ }
+  });
+  preference.addEventListener('change', event => {
+    if (savedTheme !== 'dark' && savedTheme !== 'light') applyTheme(event.matches ? 'dark' : 'light');
+  });
+
+  const newsList = document.getElementById('news-list');
+  const newsToggle = document.getElementById('news-toggle');
+  if (newsList.children.length > 4) {
+    newsList.classList.add('is-collapsible');
+    newsToggle.hidden = false;
+    newsToggle.addEventListener('click', () => {
+      const expanded = newsList.classList.toggle('expanded');
+      newsToggle.setAttribute('aria-expanded', String(expanded));
+      newsToggle.innerHTML = expanded ? 'Show less <span aria-hidden="true">↑</span>' : 'Show earlier news <span aria-hidden="true">↓</span>';
+    });
+  }
+})();
