@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=DM+Mono:wght@400;500&amp;family=Source+Serif+4:wght@500;600;700&amp;display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20261011-2">
+  <link rel="stylesheet" href="styles.css?v=20261016-2">
   <script src="utils.js?v=20261011-2" defer></script>
 </head>
 <body>
@@ -33,7 +33,7 @@
         <h1 id="name">Chengyao Wang <span lang="zh">王程钥</span></h1>
       </div>
       <div class="intro">
-        <p>I am a Research Scientist at <strong>Tencent Hy</strong>, working on Multimodal Learning and Agentic AI. I obtained my PhD degree from the Chinese University of Hong Kong (CUHK), advised by <a href="https://jiaya.me/">Prof. Jiaya Jia</a> and <a href="https://www.cse.cuhk.edu.hk/~byu/">Prof. Bei Yu</a>. Prior to that, I received my bachelor's degree in Computer Science from Sun Yat-Sen University.</p>
+        <p>I am a Research Scientist at <a href="https://hy.tencent.com/"><strong>Tencent Hy</strong></a>, working on Multimodal Learning and Agentic AI. I received my Ph.D. from the Department of Computer Science and Engineering at <a href="https://www.cuhk.edu.hk/">The Chinese University of Hong Kong (CUHK)</a>, advised by <a href="https://jiaya.me/">Prof. Jiaya Jia</a> and <a href="https://www.cse.cuhk.edu.hk/~byu/">Prof. Bei Yu</a>. Prior to that, I received my bachelor's degree in Computer Science from <a href="https://www.sysu.edu.cn/sysuen/">Sun Yat-Sen University (SYSU)</a>.</p>
         <p>I am particularly interested in building <strong>Multimodal Intelligence</strong> that interacts with the physical world and learns continuously from experience. My recent work focuses on multimodal foundation models and embodied AI. Representative work includes <a href="#llamavid">LLaMA-VID</a>, <a href="#minigemini">Mini-Gemini</a>, <a href="#mgm-omni">MGM-Omni</a> and <a href="#vlact">VLAct</a>.</p>
         <p>Always happy to chat about research, open source, life, careers, and investing. Feel free to <a href="mailto:wcy1122@link.cuhk.edu.hk">email me</a> and set up a coffee chat.</p>
       </div>
@@ -47,9 +47,9 @@
       </div>
     </section>
     <section id="news" class="section" aria-labelledby="news-heading">
-      <h2 id="news-heading"><span aria-hidden="true">//</span> News</h2>
+      <h2 id="news-heading">News</h2>
       <ul class="news-list" id="news-list">
-        <li><time datetime="2026-09">2026.9</time><div><a href="https://arxiv.org/abs/2608.27550">VLAct</a> was accepted to <strong>NeurIPS 2026, Sydney</strong>!</div></li>
+        <li><time datetime="2026-09">26.9</time><div><a href="https://arxiv.org/abs/2608.27550">VLAct</a> was accepted to NeurIPS 2026, Sydney!</div></li>
         <li><time datetime="2026-08">2026.08</time><div>We released <a href="https://arxiv.org/abs/2608.27550">VLAct</a>, an open-source VLA pre-training framework with strong generalizability.</div></li>
         <li><time datetime="2026-07">2026.07</time><div>Passed my PhD oral defence, cheers!</div></li>
         <li><time datetime="2026-06">2026.06</time><div><a href="https://arxiv.org/abs/2509.25131">MGM-Omni</a> was accepted to ECCV 2026, Malmo.</div></li>
@@ -66,16 +66,28 @@
       <button class="news-toggle" id="news-toggle" type="button" aria-controls="news-list" aria-expanded="false" hidden>Show earlier news <span aria-hidden="true">↓</span></button>
     </section>
     <section id="research" class="section" aria-labelledby="research-heading">
-      <div class="section-heading"><h2 id="research-heading"><span aria-hidden="true">//</span> Research</h2><p class="section-note">* Equal contribution</p></div>
-      <nav class="research-index" aria-label="Research topics"><a href="#multimodal">Multimodal models</a><a href="#embodied">Embodied AI</a><a href="#generation">Visual generation</a><a href="#perception">Perception &amp; representation</a></nav>
-      <section class="research-group" id="multimodal" aria-labelledby="multimodal-heading">
-        <h3 id="multimodal-heading">Multimodal Large Language Models <span class="count">05</span></h3>
+      <div class="section-heading"><h2 id="research-heading">Selected Research</h2><p class="section-note">* Equal contribution</p></div>
+        <article class="publication" id="vlact">
+          <a class="publication-image" href="https://arxiv.org/abs/2608.27550" tabindex="-1" aria-hidden="true"><img src="figures/VLAct.png" alt="" loading="lazy" decoding="async"></a>
+          <div class="publication-body">
+            <h4><a href="https://arxiv.org/abs/2608.27550">Beyond Data Scaling: Representation-Centric Continued Pre-training for Vision-Language-Action Models</a></h4>
+            <p class="authors">Senqiao Yang*, <strong>Chengyao Wang*</strong>, Yuxin Chen, Zixuan Wang, Longxiang Tang, Haokun Gui, Jinhui Ye, Changsheng Lu, Xiaoyang Wu, Mingkang Zhu, Pengguang Chen, Shu Liu, Zhuotao Tian, Hengshuang Zhao, Bei Yu, Jiaya Jia</p>
+            <div class="publication-meta">
+              <span class="topic">Embodied AI</span>
+              <span class="venue">NeurIPS 2026</span>
+              <div class="paper-links" aria-label="Resources for vlact"><a href="https://arxiv.org/pdf/2608.27550.pdf">Paper</a>
+              <a href="https://github.com/starVLA/VLAct">Code</a>
+              <a href="https://starvla.github.io/VLAct">Project</a></div>
+            </div>
+          </div>
+        </article>
         <article class="publication" id="mgm-omni">
           <a class="publication-image" href="https://arxiv.org/abs/2509.25131" tabindex="-1" aria-hidden="true"><img src="figures/MGM-Omni.png" alt="" loading="lazy" decoding="async"></a>
           <div class="publication-body">
             <h4><a href="https://arxiv.org/abs/2509.25131">MGM-Omni: Scaling Omni LLMs to Personalized Long-Horizon Speech</a></h4>
             <p class="authors"><strong>Chengyao Wang*</strong>, Zhisheng Zhong*, Bohao Peng*, Senqiao Yang, Yuqi Liu, Haokun Gui, Bin Xia, Jingyao Li, Bei Yu, Jiaya Jia</p>
             <div class="publication-meta">
+              <span class="topic">Multimodal LLMs</span>
               <span class="venue">ECCV 2026</span>
               <div class="paper-links" aria-label="Resources for mgm-omni"><a href="https://arxiv.org/pdf/2509.25131.pdf">Paper</a>
               <a href="https://github.com/dvlab-research/MGM-Omni">Code</a>
@@ -89,6 +101,7 @@
             <h4><a href="https://arxiv.org/abs/2412.09501">Lyra: An Efficient and Speech-Centric Framework for Omni-Cognition</a></h4>
             <p class="authors">Zhisheng Zhong*, <strong>Chengyao Wang*</strong>, Yuqi Liu*, Senqiao Yang, Longxiang Tang, Yuechen Zhang, Jingyao Li, Tianyuan Qu, Yanwei Li, Yukang Chen, Shaozuo Yu, Sitong Wu, Eric Lo, Shu Liu, Jiaya Jia</p>
             <div class="publication-meta">
+              <span class="topic">Multimodal LLMs</span>
               <span class="venue">ICCV 2025</span>
               <div class="paper-links" aria-label="Resources for lyra"><a href="https://arxiv.org/pdf/2412.09501.pdf">Paper</a>
               <a href="https://github.com/dvlab-research/Lyra">Code</a>
@@ -103,6 +116,7 @@
             <h4><a href="https://arxiv.org/abs/2412.04467">VisionZip: Longer is Better but Not Necessary in Vision Language Models</a></h4>
             <p class="authors">Senqiao Yang, Yukang Chen, Zhuotao Tian, <strong>Chengyao Wang</strong>, Jingyao Li, Bei Yu, Jiaya Jia</p>
             <div class="publication-meta">
+              <span class="topic">Multimodal LLMs</span>
               <span class="venue">CVPR 2025</span>
               <div class="paper-links" aria-label="Resources for visionzip"><a href="https://arxiv.org/pdf/2412.04467.pdf">Paper</a>
               <a href="https://github.com/dvlab-research/VisionZip">Code</a>
@@ -116,6 +130,7 @@
             <h4><a href="https://arxiv.org/abs/2403.18814">Mini-Gemini: Mining the Potential of Multi-modality Vision Language Models</a></h4>
             <p class="authors">Yanwei Li*, Yuechen Zhang*, <strong>Chengyao Wang*</strong>, Zhisheng Zhong, Yixin Chen, Ruihang Chu, Shaoteng Liu, Jiaya Jia</p>
             <div class="publication-meta">
+              <span class="topic">Multimodal LLMs</span>
               <span class="venue">TPAMI 2025</span>
               <div class="paper-links" aria-label="Resources for minigemini"><a href="https://arxiv.org/pdf/2403.18814.pdf">Paper</a>
               <a href="https://github.com/dvlab-research/MiniGemini">Code</a>
@@ -130,90 +145,12 @@
             <h4><a href="https://arxiv.org/abs/2311.17043">LLaMA-VID: An Image is Worth 2 Tokens in Large Language Models</a></h4>
             <p class="authors">Yanwei Li*, <strong>Chengyao Wang*</strong>, Jiaya Jia</p>
             <div class="publication-meta">
+              <span class="topic">Multimodal LLMs</span>
               <span class="venue">ECCV 2024</span>
               <div class="paper-links" aria-label="Resources for llamavid"><a href="https://arxiv.org/pdf/2311.17043.pdf">Paper</a>
               <a href="https://github.com/dvlab-research/LLaMA-VID">Code</a>
               <a href="https://llama-vid.github.io/">Project</a>
               <a href="http://103.170.5.190:7864/">Demo</a></div>
-            </div>
-          </div>
-        </article>
-      </section>
-
-      <section class="research-group" id="embodied" aria-labelledby="embodied-heading">
-        <h3 id="embodied-heading">Embodied AI <span class="count">02</span></h3>
-        <article class="publication" id="vlact">
-          <a class="publication-image" href="https://arxiv.org/abs/2608.27550" tabindex="-1" aria-hidden="true"><img src="figures/VLAct.png" alt="" loading="lazy" decoding="async"></a>
-          <div class="publication-body">
-            <h4><a href="https://arxiv.org/abs/2608.27550">Beyond Data Scaling: Representation-Centric Continued Pre-training for Vision-Language-Action Models</a></h4>
-            <p class="authors">Senqiao Yang*, <strong>Chengyao Wang*</strong>, Yuxin Chen, Zixuan Wang, Longxiang Tang, Haokun Gui, Jinhui Ye, Changsheng Lu, Xiaoyang Wu, Mingkang Zhu, Pengguang Chen, Shu Liu, Zhuotao Tian, Hengshuang Zhao, Bei Yu, Jiaya Jia</p>
-            <div class="publication-meta">
-              <span class="venue venue-highlight">NeurIPS 2026</span>
-              <div class="paper-links" aria-label="Resources for vlact"><a href="https://arxiv.org/pdf/2608.27550.pdf">Paper</a>
-              <a href="https://github.com/starVLA/VLAct">Code</a>
-              <a href="https://starvla.github.io/VLAct">Project</a></div>
-            </div>
-          </div>
-        </article>
-        <article class="publication" id="starvla">
-          <a class="publication-image" href="https://arxiv.org/abs/2604.05014" tabindex="-1" aria-hidden="true"><img src="figures/StarVLA.png" alt="" loading="lazy" decoding="async"></a>
-          <div class="publication-body">
-            <h4><a href="https://arxiv.org/abs/2604.05014">StarVLA: A Lego-like Codebase for Vision-Language-Action Model Developing</a></h4>
-            <p class="authors">StarVLA Community</p>
-            <div class="publication-meta">
-              <span class="venue">Technical Report</span>
-              <div class="paper-links" aria-label="Resources for starvla"><a href="https://arxiv.org/pdf/2604.05014.pdf">Paper</a>
-              <a href="https://github.com/starVLA/starVLA">Code</a>
-              <a href="https://starvla.github.io">Project</a></div>
-            </div>
-          </div>
-        </article>
-      </section>
-
-      <section class="research-group" id="generation" aria-labelledby="generation-heading">
-        <h3 id="generation-heading">Visual Generation <span class="count">02</span></h3>
-        <article class="publication" id="dreamomni2">
-          <a class="publication-image" href="https://arxiv.org/abs/2510.06679" tabindex="-1" aria-hidden="true"><img src="figures/DreamOmni2.png" alt="" loading="lazy" decoding="async"></a>
-          <div class="publication-body">
-            <h4><a href="https://arxiv.org/abs/2510.06679">DreamOmni2: Multimodal Instruction-based Editing and Generation</a></h4>
-            <p class="authors">Bin Xia, Bohao Peng, Yuechen Zhang, Junjia Huang, Jiyang Liu, Jingyao Li, Haoru Tan, Sitong Wu, <strong>Chengyao Wang</strong>, Yitong Wang, Xinglong Wu, Bei Yu, Jiaya Jia</p>
-            <div class="publication-meta">
-              <span class="venue">CVPR 2026</span>
-              <div class="paper-links" aria-label="Resources for dreamomni2"><a href="https://arxiv.org/pdf/2510.06679.pdf">Paper</a>
-              <a href="https://github.com/dvlab-research/DreamOmni2">Code</a>
-              <a href="https://pbihao.github.io/projects/DreamOmni2/index.html">Project</a>
-              <a href="https://huggingface.co/spaces/wcy1122/DreamOmni2-Edit">Edit demo</a>
-              <a href="https://huggingface.co/spaces/wcy1122/DreamOmni2-Gen">Generation demo</a></div>
-            </div>
-          </div>
-        </article>
-        <article class="publication" id="dreamomni">
-          <a class="publication-image" href="https://arxiv.org/abs/2412.17098" tabindex="-1" aria-hidden="true"><img src="figures/DreamOmni.png" alt="" loading="lazy" decoding="async"></a>
-          <div class="publication-body">
-            <h4><a href="https://arxiv.org/abs/2412.17098">DreamOmni: Unified Image Generation and Editing</a></h4>
-            <p class="authors">Bin Xia, Yuechen Zhang, Jingyao Li, <strong>Chengyao Wang</strong>, Yitong Wang, Xinglong Wu, Bei Yu, Jiaya Jia</p>
-            <div class="publication-meta">
-              <span class="venue">CVPR 2025</span>
-              <div class="paper-links" aria-label="Resources for dreamomni"><a href="https://arxiv.org/pdf/2412.17098.pdf">Paper</a>
-              <a href="https://zj-binxia.github.io/DreamOmni-ProjectPage">Project</a></div>
-            </div>
-          </div>
-        </article>
-      </section>
-
-      <section class="research-group" id="perception" aria-labelledby="perception-heading">
-        <h3 id="perception-heading">Visual Perception &amp; Representation <span class="count">04</span></h3>
-        <article class="publication" id="concerto">
-          <a class="publication-image" href="https://arxiv.org/abs/2510.23607" tabindex="-1" aria-hidden="true"><img src="figures/Concerto.png" alt="" loading="lazy" decoding="async"></a>
-          <div class="publication-body">
-            <h4><a href="https://arxiv.org/abs/2510.23607">Concerto: Joint 2D-3D Self-Supervised Learning Emerges Spatial Representations</a></h4>
-            <p class="authors">Yujia Zhang, Xiaoyang Wu, Yixing Lao, <strong>Chengyao Wang</strong>, Zhuotao Tian, Naiyan Wang, Hengshuang Zhao</p>
-            <div class="publication-meta">
-              <span class="venue">NeurIPS 2025</span>
-              <div class="paper-links" aria-label="Resources for concerto"><a href="https://arxiv.org/pdf/2510.23607.pdf">Paper</a>
-              <a href="https://github.com/Pointcept/Concerto">Code</a>
-              <a href="https://pointcept.github.io/Concerto/">Project</a>
-              <a href="https://huggingface.co/spaces/Pointcept/Concerto">Demo</a></div>
             </div>
           </div>
         </article>
@@ -223,46 +160,23 @@
             <h4><a href="https://arxiv.org/abs/2403.09639">GroupContrast: Semantic-aware Self-supervised Representation Learning for 3D Understanding</a></h4>
             <p class="authors"><strong>Chengyao Wang</strong>, Li Jiang, Xiaoyang Wu, Zhuotao Tian, Bohao Peng, Hengshuang Zhao, Jiaya Jia</p>
             <div class="publication-meta">
+              <span class="topic">Perception &amp; representation</span>
               <span class="venue">CVPR 2024</span>
               <div class="paper-links" aria-label="Resources for groupcontrast"><a href="https://arxiv.org/pdf/2403.09639.pdf">Paper</a>
               <a href="https://github.com/dvlab-research/GroupContrast">Code</a></div>
             </div>
           </div>
         </article>
-        <article class="publication" id="hdmnet">
-          <a class="publication-image" href="https://arxiv.org/abs/2303.14652" tabindex="-1" aria-hidden="true"><img src="figures/HDMNet.png" alt="" loading="lazy" decoding="async"></a>
-          <div class="publication-body">
-            <h4><a href="https://arxiv.org/abs/2303.14652">Hierarchical Dense Correlation Distillation for Few-Shot Segmentation</a></h4>
-            <p class="authors">Bohao Peng, Zhuotao Tian, Xiaoyang Wu, <strong>Chengyao Wang</strong>, Shu Liu, Jingyong Su, Jiaya Jia</p>
-            <div class="publication-meta">
-              <span class="venue">CVPR 2023 (Highlight)</span>
-              <div class="paper-links" aria-label="Resources for hdmnet"><a href="https://arxiv.org/pdf/2303.14652.pdf">Paper</a>
-              <a href="https://github.com/Pbihao/HDMNet">Code</a></div>
-            </div>
-          </div>
-        </article>
-        <article class="publication" id="msil">
-          <a class="publication-image" href="https://dl.acm.org/doi/abs/10.1145/3503161.3548242" tabindex="-1" aria-hidden="true"><img src="figures/MSIL.png" alt="" loading="lazy" decoding="async"></a>
-          <div class="publication-body">
-            <h4><a href="https://dl.acm.org/doi/abs/10.1145/3503161.3548242">Mixed supervision for instance learning in object detection with few-shot annotation</a></h4>
-            <p class="authors">Yi Zhong*, <strong>Chengyao Wang*</strong>, Shiyong Li, Zhu Zhou, Yaowei Wang, Wei-Shi Zheng</p>
-            <div class="publication-meta">
-              <span class="venue">ACM MM 2022</span>
-              <div class="paper-links" aria-label="Resources for msil"><a href="https://drive.google.com/file/d/1AGChiG00dIMrvqPhtChj26uE_Etz3Vxj/view">Paper</a></div>
-            </div>
-          </div>
-        </article>
-      </section>
     </section>
     <section id="awards" class="section" aria-labelledby="awards-heading">
-      <h2 id="awards-heading"><span aria-hidden="true">//</span> Selected Awards</h2>
+      <h2 id="awards-heading">Selected Awards</h2>
       <ul class="awards-list">
         <li><span class="award-badge">Gold × 3</span><div>International Collegiate Programming Contest <span class="muted">· ICPC Regional</span></div></li>
         <li><span class="award-badge">Gold</span><div>Chinese Collegiate Programming Contest <span class="muted">· CCPC</span></div></li>
       </ul>
     </section>
     <section id="service" class="section service" aria-labelledby="service-heading">
-      <h2 id="service-heading"><span aria-hidden="true">//</span> Academic Service</h2>
+      <h2 id="service-heading">Academic Service</h2>
       <p class="muted">Reviewer / Program Committee Member</p>
       <ul class="service-list">
         <li><abbr title="IEEE/CVF Conference on Computer Vision and Pattern Recognition">CVPR</abbr></li>
